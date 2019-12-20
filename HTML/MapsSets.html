@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="title">Maps & Keys</title>
+    <script src="../JS/CommonFunctions.js"></script>
+    <script src="../JS/jquery.js"></script>
+    <script>$(document).ready(function () {
+        changeContent('0');//When the document is ready, changes the content panel to the initial value.
+    });</script>
+    <link rel="stylesheet" href="../CSS/StyleSheet.css">
+</head>
+<body>
+<div id="menuBar">
+    <script> displayMenu();</script><!-- calls the function to display the menu bar -->
+</div>
+<div class="content">
+    <div id="navBar">
+        <button id="btnOverview" type="button" onclick="changeContent('0')" class="blockBtn">Overview</button>
+        <button id="btnExample" type="button" onclick="changeContent('1')" class="blockBtn">Example</button>
+        <button id="btnJavaExample" type="button" onclick="changeContent('2')" class="blockBtn">Example In Java</button>
+    </div>
+
+    <div id="scene0" class="text">
+        <h1 class="titleText">Overview of Maps and Keys</h1>
+        <p>Maps and Keys are, in my opinion, the most complicated data structure I will be covering on this site.
+        <p>They effectively map a value to another value, and can have different data types for the map and the key.
+        <p>I utilised a HashMap in my project last year to map error codes to error messages in my room booking system.
+    </div>
+
+    <div id="scene1" class="text">
+        <h1 class="titleText">Example</h1>
+        <p>I will use the aforementioned example from my project to explain maps and keys.
+        <p>I had the Error codes 1 through 5, each corresponding to a different message depending on the error that
+            occurred.
+        <p>I used a HashMap mapping Integers to Strings to store this data. On the following page I will show you how I
+            implemented this.</p>
+    </div>
+
+    <div id="scene2" class="text">
+        <h1 class="titleText">Example in Java</h1>
+        <h2>Initialising the HashMap</h2>
+        <img src="../Media/HashMap%20initialise.png" alt="Initialising HashMap in Java">
+        <p>pretty simple declaration with the syntax being
+        <div style="font-family: monospace">HashMap&lt;KeyType, DataType&gt;hashMapName = new HashMap&lt;&gt;();</div>
+        <p>Note that as with the lists syntax, the second angle brackets do not require information, as it is inferred
+            from the left hand side of the declaration.
+
+        <h2>Setting up my codes and messages</h2>
+        <img src="../Media/HashMap%20setup%20values.png" alt="Assigning values to the HashMap in Java">
+        <p>As you can see above, the put method is used to add Keys and their mapped values to the HashMap.
+
+        <h2>Utilising my HashMap in my program</h2>
+        <h3>The error occurs: </h3>
+        <img src="../Media/HashMap%20errors%201.png" alt="Shows where the HashMap is used">
+        <p>This is my code for starting my database. You can see that if the database fails to start, it will call the
+            alert function from the CustomAlert class.
+        <h3>The alert is created: </h3>
+        <img src="../Media/HashMap%20errors%202.png" alt="Shows where the HashMap is used">
+        <p>This code takes the error code and the related exception, and creates an Alert by looking up the error
+            message relevant to the error code that occurs(using the get method on the HashMap),
+        <p>providing the user with a more detailed description of the failure rather than simply showing them an error
+            code.
+
+        <h2>Tutorial for further learning</h2>
+        <p>Hopefully my example made sense, although I know it is likely easier for me to follow since I wrote the code,
+            however here is a nice tutorial that will probably explain things a bit clearer than i did: </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hgawTLk0o3Y" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <p>Credit to java9s on YouTube.
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: slategrey;
+    padding: 15px 0;
+    height: 5%;
+}
+
+li {
+    display: inline;
+    height: 100%;
+    float: left;
+}
+
+li a {
+    height: 100%;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: 0;
+    -webkit-transition: 0.5s;
+}
+
+li a:hover {
+    background-color: #3d414b;
+    padding: 15px 40px;
+}
+
+.about {
+    border: 0;
+    background-color: #171f80;
+    padding: 15px 50px;
+    height: 100%;
+    -webkit-transition: 0.5s;
+}
+
+.about:hover {
+    background-color: #0e124b;
+    padding: 15px 100px;
+}
+
+.title {
+    padding: 15px 100px 15px 100px;
+    background-color: #3d414b;
+    -webkit-transition: 0s;
+}
+
+.title:hover {
+    background-color: #3d414b;
+    padding: 15px 100px;
+}
+
+#navBar {
+    max-width: 200px;
+    float: left;
+    border-right: 100px blue;
+    height: 100%;
+    margin: 0 20px 1700px 0;
+
+}
+
+.blockBtn {
+    -webkit-transition: 0.5s;
+    display: block;
+    width: 100%;
+    height: 70px;
+    background-color: #2832bc;
+    color: whitesmoke;
+    border: 0;
+    margin: 3px 0;
+    border-left: 10px #171f80;
+    border-style: solid;
+}
+
+.blockBtn:hover {
+    height: 100px;
+    background-color: #3a47ff;
+}
+
+.content {
+    padding: 50px 0 10px;
+    height: 100%;
+}
+
+.text {
+    -webkit-transition: 0.5s;
+    margin-left: 123px;
+    color: whitesmoke;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background-image: linear-gradient(#3d414b, #141518);
+
+}
+
+#canvas {
+    position: relative;
+    left: 33%;
+    top: 20%;
+    width: 600px;
+    height: 300px;
+    border: #2832bc solid 3px;
+    display: flex;
+}
+
+.arrayEl {
+    position: relative;
+    vertical-align: middle;
+    color: #171f80;
+    background-color: whitesmoke;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 5px;
+    z-index: 1000;
+}
+
+.arrayCont {
+    position: absolute;
+    bottom: 5%;
+    background-color: #2832bc;
+    border: #7485ff solid 3px;
+    width: 100%;
+    height: 80px;
+    color: whitesmoke;
+}
+
+button {
+    background-color: #2832bc;
+    color: whitesmoke;
+    border: 0;
+    padding: 10px;
+    margin: 10px;
+}
+
+button:active {
+    background-color: #3a47ff;
+}
+
+#TitlePage {
+    height: 100vh;
+}

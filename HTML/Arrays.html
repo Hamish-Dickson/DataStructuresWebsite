@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="title">Arrays</title>
+    <script src="../JS/CommonFunctions.js"></script>
+    <script src="../JS/jquery.js"></script>
+    <script>$(document).ready(function () {
+        changeContent('0');//When the document is ready, changes the content panel to the initial value.
+    });</script>
+    <link rel="stylesheet" href="../CSS/StyleSheet.css">
+</head>
+<body>
+<div id="menuBar">
+    <script> displayMenu();</script><!-- calls the function to display the menu bar -->
+</div>
+<div class="content">
+    <div id="navBar">
+        <button id="btnOverview" type="button" onclick="changeContent('0')" class="blockBtn">Overview</button>
+        <button id="btnExample" type="button" onclick="changeContent('1')" class="blockBtn">Example</button>
+        <button id="btnJavaExample" type="button" onclick="changeContent('2')" class="blockBtn">Example In Java</button>
+    </div>
+
+    <div id="scene0" class="text">
+        <h1 class="titleText">Overview of Arrays</h1>
+        <button onclick="moveStuff()">Click to see how elements go into an array!</button>
+        <div id="canvas">
+            <div class="arrayEl">23</div>
+            <div class="arrayEl">43</div>
+            <div class="arrayEl">65</div>
+            <div class="arrayEl">17</div>
+            <div class="arrayEl">26</div>
+            <div class="arrayEl">18</div>
+            <div class="arrayEl">95</div>
+            <div class="arrayEl">103</div>
+            <div class="arrayEl">52</div>
+            <div class="arrayEl">34</div>
+            <div class="arrayCont">Array</div>
+        </div>
+        <p>An Array is a simple data structure that consists of a collection of elements, much like a list, wherein each
+            element is identified by and index.
+        <p>Arrays can have multiple dimensions, but we will be focusing on the
+            basics, a one-dimensional array.
+    </div>
+
+    <div id="scene1" class="text">
+        <h1 class="titleText">Example</h1>
+        <p>Say we had a data set, perhaps lottery numbers for a person.
+        <p>The numbers are <b>23, 43, 34, 18, 10 and 7.</b></p>
+        <p>
+            If we were to use an array to store these items, we would have our data, with each item indexed from 0
+            through
+            5 (arrays start at 0. unless you are using some strange language, but mostly it's 0.)
+        <p>We would get the following:
+        <p><img src="../Media/List%20example%20initial.png" alt="Data set containing 23, 43, 34, 18, 10 and 7">
+        <p>On the next slide I will show you how to implement this in Java, as well as how we can manipulate it.
+    </div>
+
+    <div id="scene2" class="text">
+        <h1 class="titleText">Example in Java</h1>
+        <h2>Initialising your Array:</h2>
+        <p><img src="../Media/Arrays%20example%20java%20initialise.png" alt="Initialising an empty array of size 6">
+        <p>The [] Syntax is used to declare an array, and you must know the size of the array to create one. The Array
+            can also be created using
+        <div style="font-family: monospace"> int lotteryNumbers[];</div>
+        <p> However this is not the preferred way.
+
+        <h2>Adding and removing items from arrays</h2>
+        <h3>Adding items on array initialisation:</h3>
+        <p><img src="../Media/Array%20add%20initialise.png" alt="Declaring the array on initialisation">
+        <h3>Adding items to each index: </h3>
+        <p><img src="../Media/Array%20add%20individual.png" alt="Adding to the array individually">
+        <h3>Removing items from an array: </h3>
+        <p>There is no nice way to remove items from a standard java array. there are ways to do this using things like
+            apache libraries and creating copies of the array without the deleted item,
+        <p>however if this functionality is
+            required, it is recommended to use a collection instead(See my page on Lists for a nicer to use data
+            structure).
+        <h2>Retrieving data from Arrays</h2>
+        <h3>Using for loop</h3>
+        <img src="../Media/Array%20fetch%20for%20loop.png" alt="Using a for loop to retrieve items from array">
+        <h3>Using for each</h3>
+        <img src="../Media/Array%20fetch%20for%20each.png" alt="Using a for each loop to retrieve items from array">
+        <p>Since java 1.5, you can use a for loop to simplify the above for loop.
+        <p>The downside to this is that you are not provided an index for the current element.
+        <h2>Extra Information</h2>
+        <p>If you want to find out more about arrays, here's a quick <10 minute tutorial on them: </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_NfwcH5zKpA" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <p>Credit to ProgrammingKnowledge on YouTube.
+    </div>
+</div>
+</body>
+</html>

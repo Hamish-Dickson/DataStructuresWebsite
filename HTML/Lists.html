@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="title">Lists</title>
+    <script src="../JS/CommonFunctions.js"></script>
+    <script src="../JS/jquery.js"></script>
+    <script>$(document).ready(function () {
+        changeContent('0');//When the document is ready, changes the content panel to the initial value.
+    });</script>
+
+    <link rel="stylesheet" href="../CSS/StyleSheet.css">
+</head>
+<body>
+<div id="menuBar">
+    <script> displayMenu();</script><!-- calls the function to display the menu bar -->
+</div>
+<div class="content">
+    <div id="navBar">
+        <button id="btnOverview" type="button" onclick="changeContent('0')" class="blockBtn">Overview</button>
+        <button id="btnExample" type="button" onclick="changeContent('1')" class="blockBtn">Example</button>
+        <button id="btnJavaExample" type="button" onclick="changeContent('2')" class="blockBtn">Example In Java</button>
+    </div>
+
+    <div id="scene0" class="text">
+        <h1 class="titleText">Overview of Lists</h1>
+        <p>Put Simply, lists are a collection of 1 or more item, each with their own reference point, or index within
+            the
+            list.
+        <p>
+            They are useful for storing multiple data entries of the same data type, such as a list of phone
+            numbers.
+    </div>
+
+    <div id="scene1" class="text">
+        <h1 class="titleText">Example</h1>
+        <p>Say we had a data set, perhaps lottery numbers for a person.
+        <p>The numbers are <b>23, 43, 34, 18, 10 and 7.</b></p>
+        <p>
+            If we were to use a list to store these items, we would have our data, with each item indexed from 0 through
+            5 (indexes start at 0. unless you are using some strange language, but mostly it's 0.)
+        <p>We would get the following:
+        <p><img src="../Media/List%20example%20initial.png" alt="Data set containing 23, 43, 34, 18, 10 and 7">
+        <p>On the next slide I will show you how to implement this in Java, as well as how we can manipulate it.
+    </div>
+
+    <div id="scene2" class="text">
+        <h1 class="titleText">Example in Java</h1>
+        <p>Here I will give some example code of how to use a List in Java. Since List is an interface, we do not create
+            lists, rather different types of list.
+        <p>for this example, I will use an ArrayList, which is a resizable list that can store multiple instances of
+            data for a single type.
+        <p>
+        <h2>Initialising the ArrayList and adding our data:</h2>
+        <p><img src="../Media/List%20Example%20Java%20Initialise.png" alt="Initialising ArrayList in Java">
+        <p>Note that the ArrayList and Lists in general can only use Non-primitive data types, so in this example I use
+            Integer instead of the primitive int type.
+        <p>Also note that the second <> does not need to be filled, as it is implied by the right hand part of the
+            declaration
+        <p>
+        <h2> Retrieving, updating, and removing data from our list:</h2>
+        <p><img src="../Media/List%20Example%20Java%20modify.png"
+                alt="Getting, adding, removing and clearing the ArrayList in Java">
+        <p>Note that if using a LinkedList implementation, the methods getFirst() and getLast() are available to return
+            the first and last elements of those lists
+        <p>
+        <h2>Iterating through Lists</h2>
+        <p>
+        <h3>Using a for each loop: </h3>
+        <p><img src="../Media/List%20Iterate%20foreach.png"
+                alt="Using a for each loop to iterate through the ArrayList">
+        <p>
+        <h3>Using an Iterator: </h3>
+        <p><img src="../Media/List%20Iterate%20Iterator.png" alt="Using an iterator to iterate through the ArrayList">
+        <p>
+        <h3>Since java 8, it is possible to use a lambda expression: </h3>
+        <p><img src="../Media/List%20iterate%20lambda.png"
+                alt="Using a for each loop with lambda expression to iterate through the ArrayList">
+        <p>Note that using an iterator is the only way to do this if removing/adding within a loop, such as a game loop,
+            as the method is thread safe.
+        <p>
+        <h3>Want even more info? Watch this video:</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/d3QbptJRln4" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <p>Credit to Jakob Jenkov on YouTube.
+    </div>
+</div>
+</body>
+</html>
